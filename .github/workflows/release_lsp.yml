@@ -323,7 +323,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: intellij_package
-          path: ./editors/intellij/build/distributions/Biome-*.zip
+          path: ./editors/intellij/build/distributions/Teste-*.zip
           if-no-files-found: error
 
       - name: Upload gradle properties file
@@ -389,6 +389,6 @@ jobs:
           prerelease: ${{ needs.build-intellij.outputs.prerelease == 'true' }}
           body_path: ${{ github.workspace }}/RELEASE_NOTES
           files: |
-            ./editors/intellij/build/distributions/Biome-*.zip
+            ./editors/intellij/build/distributions/Teste-*.zip
           fail_on_unmatched_files: true
           generate_release_notes: true
