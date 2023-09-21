@@ -1,0 +1,171 @@
+---
+source: crates/biome_formatter_test/src/snapshot_builder.rs
+info: js/module/newlines.js
+---
+
+# Input
+
+```js
+"directive";
+// comment
+"directive";
+
+"directive";
+
+
+"directive";
+
+
+statement();
+// comment
+statement();
+
+statement();
+
+
+statement();
+
+
+;
+
+
+
+switch(a) {
+    case 1:
+        break;
+    // comment
+    case 2:
+        break;
+
+    case 3:
+        break;
+
+
+    case 3:
+        break;
+
+}
+
+
+class Test {
+    item;
+    // comment
+    item2;
+
+    item3;
+
+
+    item4;
+
+}
+
+
+const array = [
+    1,
+    // comment
+    2,
+
+    3,
+
+
+    4,
+
+];
+
+
+const object = {
+    key1: 1,
+    // comment
+    key2: 2,
+
+    key3: 3,
+
+
+    key4: 4,
+
+};
+
+```
+
+
+=============================
+
+# Outputs
+
+## Output 1
+
+-----
+Indent style: Tab
+Indent width: 2
+Line width: 80
+Quote style: Double Quotes
+JSX quote style: Double Quotes
+Quote properties: As needed
+Trailing comma: All
+Semicolons: Always
+Arrow parentheses: Always
+-----
+
+```js
+"directive";
+// comment
+"directive";
+
+"directive";
+
+"directive";
+
+statement();
+// comment
+statement();
+
+statement();
+
+statement();
+
+switch (a) {
+	case 1:
+		break;
+	// comment
+	case 2:
+		break;
+
+	case 3:
+		break;
+
+	case 3:
+		break;
+}
+
+class Test {
+	item;
+	// comment
+	item2;
+
+	item3;
+
+	item4;
+}
+
+const array = [
+	1,
+	// comment
+	2,
+
+	3,
+
+	4,
+];
+
+const object = {
+	key1: 1,
+	// comment
+	key2: 2,
+
+	key3: 3,
+
+	key4: 4,
+};
+```
+
+

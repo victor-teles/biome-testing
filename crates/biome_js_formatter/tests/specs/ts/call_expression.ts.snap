@@ -1,0 +1,80 @@
+---
+source: crates/biome_formatter_test/src/snapshot_builder.rs
+info: ts/call_expression.ts
+---
+
+# Input
+
+```ts
+app.get("/", (req, res): void => {
+    res.send("Hello World!");
+})
+
+
+export class Thing implements OtherThing {
+    do: (type: Type) => Provider<Prop> = memoize(
+        (type: ObjectType): Provider<Opts> => {}
+    );
+}
+
+// Issue https://github.com/rome/tools/issues/2756
+export class Task {
+    args: any[];
+
+    constructor(
+        public script: string,
+        public duration: number,
+        public threadCount: number,
+        ...args: any[]
+    ) {
+        this.args = args;
+    }
+}
+```
+
+
+=============================
+
+# Outputs
+
+## Output 1
+
+-----
+Indent style: Tab
+Indent width: 2
+Line width: 80
+Quote style: Double Quotes
+JSX quote style: Double Quotes
+Quote properties: As needed
+Trailing comma: All
+Semicolons: Always
+Arrow parentheses: Always
+-----
+
+```ts
+app.get("/", (req, res): void => {
+	res.send("Hello World!");
+});
+
+export class Thing implements OtherThing {
+	do: (type: Type) => Provider<Prop> = memoize(
+		(type: ObjectType): Provider<Opts> => {},
+	);
+}
+
+// Issue https://github.com/rome/tools/issues/2756
+export class Task {
+	args: any[];
+
+	constructor(
+		public script: string,
+		public duration: number,
+		public threadCount: number,
+		...args: any[]
+	) {
+		this.args = args;
+	}
+}
+```
+
+

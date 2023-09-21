@@ -1,0 +1,19 @@
+{
+	"$schema": "../../../../../../packages/@biomejs/biome/configuration_schema.json",
+	"linter": {
+	"rules": {
+		"nursery": {
+			"useHookAtTopLevel": {
+				"level": "error",
+				"options": {
+					"hooks": [
+							{
+									"name": "useCustomHook"
+							}
+						]
+					}
+				}
+			}
+		}
+	}
+}

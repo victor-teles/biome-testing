@@ -1,0 +1,10 @@
+{
+	"cases": [
+		{
+			"trailing_comma": "ES5"
+		},
+		{
+			"trailing_comma": "None"
+		}
+	]
+}

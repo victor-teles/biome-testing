@@ -1,0 +1,9 @@
+.env
+build
+.vercel
+node_modules
+package-lock.json
+
+# Auto generated
+src/_includes/styles
+.astro/

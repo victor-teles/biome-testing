@@ -1,0 +1,26 @@
+.DS_Store
+Profile-*.json
+# Editor configuration
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+.idea
+.vs
+# Release artifacts
+**/target
+# Ignore test files that contributors could create locally
+/test.*
+# Ignore third-party files
+**/node_modules
+**/dist
+**/build
+packages/@biomejs/cli-*
+.pnpm-debug.log
+
+# https://github.com/nnethercote/dhat-rs output file
+dhat-heap.json
+
+crates/biome_js_formatter/report.*
+crates/biome_json_formatter/report.*
+.vercel

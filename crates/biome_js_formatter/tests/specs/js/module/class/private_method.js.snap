@@ -1,0 +1,70 @@
+---
+source: crates/biome_formatter_test/src/snapshot_builder.rs
+info: js/module/class/private_method.js
+---
+
+# Input
+
+```js
+class Foo {
+  a = 1;
+
+  *#a() {
+    yield bar();
+  }
+
+  #b = 2;
+
+  get b() { return 9999; }
+  set #c(x) { return x; }
+
+  static #d() {
+    return Math.random();
+  }
+}
+
+```
+
+
+=============================
+
+# Outputs
+
+## Output 1
+
+-----
+Indent style: Tab
+Indent width: 2
+Line width: 80
+Quote style: Double Quotes
+JSX quote style: Double Quotes
+Quote properties: As needed
+Trailing comma: All
+Semicolons: Always
+Arrow parentheses: Always
+-----
+
+```js
+class Foo {
+	a = 1;
+
+	*#a() {
+		yield bar();
+	}
+
+	#b = 2;
+
+	get b() {
+		return 9999;
+	}
+	set #c(x) {
+		return x;
+	}
+
+	static #d() {
+		return Math.random();
+	}
+}
+```
+
+

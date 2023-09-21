@@ -1,0 +1,27 @@
+---
+export interface Props {
+  coverImage?: string;
+	coverImageCaption?: string;
+	coverImageAltText?: string;
+	subtitle: string;
+	title: string;
+}
+
+import BlogPostInfo from "../components/BlogPostInfo.astro";
+
+const {coverImage, coverImageCaption, coverImageAltText, subtitle, title} = Astro.props.frontmatter;
+---
+
+<Fragment>
+	{coverImage && <figure class="blog-cover">
+		<img alt={coverImageAltText} src={`/img/${coverImage}`}>
+		{coverImageCaption && <figcaption class="blog-cover-caption">{coverImageCaption}</figcaption>}
+	</figure>}
+
+	{subtitle && <div class="subtitle">{subtitle}</div>}
+
+	<BlogPostInfo {...Astro.props} />
+
+	<slot />
+</Fragment>
+

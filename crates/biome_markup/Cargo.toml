@@ -1,0 +1,18 @@
+[package]
+authors.workspace    = true
+description          = "Macro to write text using a HTML-like syntax"
+documentation        = "https://docs.rs/biome_markup"
+edition.workspace    = true
+license.workspace    = true
+name                 = "biome_markup"
+repository.workspace = true
+version              = "0.0.1"
+
+
+[lib]
+proc-macro = true
+
+[dependencies]
+proc-macro-error = { version = "1.0.4", default-features = false }
+proc-macro2      = "1.0.63"
+quote            = "1.0.14"

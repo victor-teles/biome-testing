@@ -1,0 +1,4 @@
+packages:
+  - "editors/vscode"
+  - "packages/**"
+  - "website"
